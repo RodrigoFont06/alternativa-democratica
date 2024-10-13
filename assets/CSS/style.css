@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+:root {
+    --primary-color: #444cf7;
+    --secondary-color: #e5e5f7;
+    --header-bg-color: #ececec;
+    --header-border-color: #0d0d0d;
+    --header-shadow-color: #0000008a;
+    --link-color: #2a2a2a;
+    --link-hover-bg-color: #ff8e3c;
+    --link-hover-color: #0d0d0d;
+    --link-shadow-color: #ffae0050;
+    --font-family: Arial, Helvetica, sans-serif;
+    --header-height: header.offsetHeight;
+    --h1-font: "DM Serif Display", serif;
+    --bg-color: #b1b1b1;
+    --barraNaranja: #ff8e3c;
+    --barraAzul: #444cf7;
+}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* #gmailP{
+    display: none;
+}
+html{
+    height: 100%;
+}
+body{
+    background-image: url(../Resources/1410932-4175188287.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+    z-index: 2;
+    height: 100%;
+}
+
+/* Header */
+
+header{
+    display: grid;
+    grid-template-columns: repeat(11, calc(100% / 11));
+    grid-template-rows: repeat(2, calc(100px / 2));
+    height: fit-content !important;
+    background-color: var(--header-bg-color);
+    border-bottom: solid 1px #0d0d0d;
+    box-shadow: 0px 0px 10px #0000008a;
+    z-index: 10;
+}
+header img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 80px !important;
+    filter: drop-shadow(0px 0px 5px #0000008a);
+}
+header ul{
+    all: unset;
+    grid-column: 8 / 12;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header ul li{
+    all: unset;
+    margin-right: 20px;
+}
+header ul li a{
+    all: unset;
+    color: var(--link-color);
+    font-family: var(--font-family);
+    padding: 5px;
+}
+header ul li a:hover{
+    cursor: pointer;
+    background-color: var(--link-hover-bg-color);
+    color: var(--link-hover-color);
+    border-radius: 100px;
+    transition: 0.5s;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+header ul li a:not(:hover){
+    transition: 0.5s;
+}
+header ul li:nth-of-type(4){
+    margin-right: 15px;
+}
+/* Fin Header */
+@keyframes AD{
+    0%{
+        color: var(--primary-color);
+        text-decoration-color: var(--primary-color);
+    }
+    50%{
+        color: var(--link-hover-bg-color);
+        text-decoration-color: var(--link-hover-bg-color);
+    }
+    100%{
+        color: var(--primary-color);
+        text-decoration-color: var(--primary-color);
+    }
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(11, calc(100% / 11));
+    grid-template-rows: repeat(11, calc(100vh / 11));
+    z-index: 2;
+    background-color: #0d0d0d6b;
+    backdrop-filter: blur(2px);
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+main h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 8 / 11;
+    grid-row: 2 / 4;
+    font-size: 2em;
+    font-family: var(--h1-font);
+    font-weight: 300;
+    font-style: normal;
+    filter: drop-shadow(0px 0px 10px #0000008a);
+    font-size: 42px;
+    color: white;
+
+}
+main h1 b{
+    font-size: 2em;
+    font-weight: 300;
+    color: var(--primary-color);
+    animation: AD 5s infinite ease-in-out;
+}
+main p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-optical-sizing: auto;
+    margin-top: 10px;
+    font-size: 24px;
+    grid-column: 8 / 11;
+    grid-row: 3 / 6;
+    color: white;
+}
+.presi{
+    width: 400px !important;
+    grid-column: 2 / 4;
+    grid-row: 1 / 9;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 5px 0px 20px var(--header-shadow-color);
+}
+.fondo{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.fondo *:not(p){
+    box-shadow: 0px 0px 15px var(--header-shadow-color);
+}
+.fondo * p{
+    opacity: 0;
+}
+.fondo *{
+    margin-top: 20px;
+    z-index: 1;
+}
+.fondo .barra1{
+    background-color: var(--barraNaranja);
+    width: 500px !important;
+    height: 50px !important;
+}
+.fondo .barra2{
+    background-color: var(--barraAzul);
+    width: 700px !important;
+    height: 50px !important;
+}
+.fondo .barra3{
+    background-color: var(--barraNaranja);
+    width: 800px !important;
+    height: 50px !important;
+}
+.fondo .barra4{
+    background-color: var(--barraAzul);
+    width: 600px !important;
+    height: 50px !important;
+}
+.fondo .barra5{
+    background-color: var(--barraNaranja);
+    width: 700px !important;
+    height: 50px !important;
+}
+.fondo .barra6{
+    background-color: var(--barraAzul);
+    width: 630px !important;
+    height: 50px !important;
+}
+.fondo .barra7{
+    background-color: var(--barraNaranja);
+    width: 680px !important;
+    height: 50px !important;
+}
+.fondo .barra8{
+    background-color: var(--barraAzul);
+    width: 700px !important;
+    height: 50px !important;
+}
+.ideologias{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 8 / 11;
+    grid-row: 5 / 8;
+    font-family: var(--font-family);
+    font-size: 19px;
+    z-index: 10;
+    color: white;
+}
+footer{
+    z-index: 10;
+    background-color: var(--header-bg-color);
+    position: fixed;
+    bottom: 0;
+    border-top: #0d0d0d solid 1px;
+    width: 100%;
+    height: 78px;
+    display: grid;
+    grid-template-columns: repeat(11, calc(100% / 11));
+    grid-template-rows: repeat(2, calc(100% / 2));
+}
+footer p{
+    grid-column: 4 / 9;
+    grid-row: 1 / 3;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a img{
+    width: 30px;
+    filter: drop-shadow(0px 0px 5px #0000008a);
+}
+footer a img:not(.mail){
+    border-radius: 100%;
+}
+footer a{
+    margin-left: 30px;
+}
+.redes{
+    grid-column: 9 / 12;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal{
+    display: none;
+}
+.modalMail{
+    background-color: var(--header-bg-color);
+    border: #0d0d0d solid 1px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content !important;
+}
+.modalMail p{
+    font-family: var(--font-family);
+    font-size: 20px;
+}
+#cerrar{
+    all: unset;
+    background-color: red;
+    border: #0d0d0d 1px solid;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px #0000008a;
+    width: fit-content !important;
+    cursor: pointer;
+    transition: .5s;
+    margin-right: 20px;
+}
+#cerrar:hover{
+    background-color: rgb(99, 0, 0);
+    transition: .5s;
+}
+#cerrar span{
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    width: fit-content !important;
+}
+.mail{
+    cursor: pointer;
+}
+#menu{
+    display: none;
+}
+@media only screen and (max-width: 767px){ /* Celular */
+    .fondo{
+        display: none;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    main h1{
+        font-size: calc(1.5em + 1.5vw);
+        margin-top: 10px;
+    }
+    .ideologias{
+        font-size: medium;
+        margin: 20px;
+    }
+    #menu{
+        all: unset;
+        grid-column: 10 / 12;
+        grid-row: 1 / 3;
+        border-radius: 100px;
+        height: fit-content !important;
+        width: fit-content !important;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-shadow: 0px 0px 10px #0000008a;
+        margin-top: auto;
+        margin-bottom: auto;
+        z-index: 10;
+        scale: 2;
+    }
+    header ul{
+        all: unset;
+        position: absolute;
+        top: calc(100vh - 85vh);
+        right: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--header-bg-color);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 10px 10px 10px #0000008a;
+        z-index: 10;
+        border-bottom: #0d0d0d solid 1px;
+        border-right: #0d0d0d solid 1px;
+        border-left: #0d0d0d solid 1px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    header ul li a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 0;
+    }
+    header ul li{
+        border-bottom: #0d0d0d solid 1px;
+        width: 100%;
+        padding: 20px;
+
+    }
+    body{
+        overflow: scroll;
+    }
+    footer{
+        z-index: 10;
+        background-color: var(--header-bg-color);
+        position: static;
+        bottom: 0;
+        border-top: #0d0d0d solid 1px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        height: 100px;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    footer p{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+    }
+    #modal{
+        display: none;
+    }
+}
